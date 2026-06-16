@@ -13,8 +13,8 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 QuizMD becomes part of the broader **LearnSpec** suite. Many additions align with universal LearnSpec conventions defined in the [Architecture Charter](https://github.com/learnspec/.github/blob/main/profile/README.md).
 
 ### Added
-- `!ref` directive — declares a MediaMD or GlossaryMD context without inline rendering
-- `!import` now supports `.diagram.md` files (DiagramMD reusable diagram bundles)
+- `!ref` directive — declares a DiagramMD, MediaMD, or GlossaryMD context without inline rendering
+- ` ```diagram ref:slug ` block — resolves a named diagram from a `!ref`-ed DiagramMD catalogue
 - `media:slug` image syntax with mandatory fallback URL — resolves to MediaMD entries
 - Explicit support for DiagramMD Level 0 blocks in question bodies
 - Frontmatter fields: `created`, `updated`, `license` (SPDX) — universal LearnSpec fields
@@ -23,11 +23,16 @@ QuizMD becomes part of the broader **LearnSpec** suite. Many additions align wit
 ### Changed
 - `lang` frontmatter field promoted from optional to **required** (warning in lenient mode, error in strict)
 - `title` frontmatter field demoted from required to **optional** — inferred from the first `# H1` if absent
+- `domain` frontmatter field renamed to `kind` — avoids clashing with the collection-level `domain` meaning
+- `!import` no longer recursive — nested imports are inert; lift every import to the entry file, and compose across files with TrackMD
+- DiagramMD reuse moved from `!import ./file.diagram.md` to `!ref` + ` ```diagram ref:slug ` (leaf catalogue addressed by slug)
 - ABC notation section removed — delegated to the [DiagramMD spec](https://github.com/learnspec/diagrammd)
 
 ### Breaking
 - `lang` is now required (lenient: warning; strict: error)
 - `title` is no longer required (parsers may need to derive it from H1)
+- `domain` renamed to `kind` (frontmatter must be migrated)
+- Nested `!import` no longer resolved (only the entry file's imports are honoured)
 
 ---
 
