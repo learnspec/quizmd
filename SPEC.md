@@ -454,6 +454,48 @@ When `partial_scoring: true` (default), **match** and **order** questions award 
 
 ---
 
+## Authoring guideline — no nested fenced blocks
+
+Do **not** nest triple-backtick fenced blocks inside other fenced blocks. Parsers scan for the first matching closing fence — a nested ` ``` ` closes the outer block prematurely, breaking the document.
+
+**When you need to show a QuizMD fenced construct** (` ```quiz `, ` ```diagram ref:slug `, ` ```{type} `, etc.) inside another document — a README, a tutorial, this spec — use one of these alternatives:
+
+| Situation | Recommended syntax |
+|-----------|-------------------|
+| Short inline snippet | Inline backticks: `` `code` `` |
+| Multi-line code example | 4-space indented block |
+| Must show a fenced block literally | Increase outer fence length to ` ````` ` and use ` ``` ` inside |
+
+This trips up authors most often when documenting a `.quiz.md` example that itself contains a ` ```quiz ` block — the natural instinct is to wrap it in a plain ` ``` ` fence, which is exactly the anti-pattern below.
+
+**Correct — outer fence escalated to 5 backticks:**
+
+`````markdown
+## Q1 · Capital of France?
+
+```quiz
+id: q1-capital
+points: 3
+```
+
+- [x] Paris
+- [ ] London
+`````
+
+**Wrong — nested fenced blocks (do not do this):**
+
+```markdown
+## Q1 · Capital of France?
+
+```quiz
+id: q1-capital
+```
+
+- [x] Paris
+```
+
+---
+
 ## Validation
 
 ### Lenient Mode (default)
