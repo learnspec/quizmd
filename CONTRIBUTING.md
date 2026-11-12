@@ -5,7 +5,7 @@ Thank you for your interest in improving the QuizMD specification.
 ## Ways to contribute
 
 ### Report an ambiguity or bug in the spec
-Open a [GitHub Issue](https://github.com/neuroneo-md/quizmd/issues) describing:
+Open a [GitHub Issue](https://github.com/learnspec/quizmd/issues) describing:
 - The section of the spec that is unclear or incorrect
 - Your interpretation and the alternative interpretation
 - A concrete `.quiz.md` example that demonstrates the ambiguity
@@ -19,7 +19,7 @@ Open an issue with the label `proposal` and describe:
 
 Proposals are discussed openly. A feature is added to the spec once:
 1. There is clear consensus on the syntax
-2. At least one implementation (e.g. neuroneo.md) has validated it in practice
+2. At least one implementation (e.g. memoneo) has validated it in practice
 3. Sample files and tests are provided
 
 ### Add a sample file
