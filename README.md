@@ -29,7 +29,7 @@ A `.quiz.md` file is valid Markdown — readable by humans, versionable in Git, 
 - **Math support** — LaTeX via KaTeX, auto-detected
 - **AI-native** — designed to be generated and validated by AI assistants via MCP
 - **Works standalone** — certifications, exams, knowledge checks without any other tooling
-- **Embeddable** — integrates inside [LearnMD](https://github.com/neuroneo-md/learnmd) lessons as checkpoints
+- **Embeddable** — integrates inside [LearnMD](https://github.com/learnspec/learnmd) lessons as checkpoints
 
 ## Specification
 
@@ -39,7 +39,7 @@ See [SPEC.md](./SPEC.md) for the full format specification.
 
 | Project | Type | Link |
 |---------|------|------|
-| neuroneo.md | Web player + API + MCP server | [neuroneo.md](https://www.neuroneo.md) |
+| memoneo | Web player + API + MCP server | [memoneo.app](https://memoneo.app) |
 
 > Built an implementation? Open a PR to add it here.
 
@@ -76,6 +76,10 @@ quizmd/
 | BadgeMD: micro-credentials | [learnspec/badgemd](https://github.com/learnspec/badgemd) |
 | CertMD: macro-credentials | [learnspec/certmd](https://github.com/learnspec/certmd) |
 | ListenMD: speech-only episode scripts | [learnspec/listenmd](https://github.com/learnspec/listenmd) |
+
+## Maintainers
+
+This repository is part of the [LearnSpec](https://learnspec.org) suite, initiated and maintained by [memoneo](https://memoneo.app). Issues and pull requests are welcome.
 
 ## License
 
