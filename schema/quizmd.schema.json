@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://github.com/neuroneo-md/quizmd/schema/quizmd.schema.json",
+  "$id": "https://github.com/learnspec/quizmd/schema/quizmd.schema.json",
   "title": "QuizMD Frontmatter",
   "description": "JSON Schema for the YAML frontmatter of a .quiz.md file (Level 1).",
   "type": "object",
